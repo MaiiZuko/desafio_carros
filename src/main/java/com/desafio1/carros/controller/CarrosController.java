@@ -30,9 +30,8 @@ public class CarrosController {
         repository.save(new Carro(dados));
     }
     @GetMapping //carrega apenas 10 registros e ordena pelo nome
-    public Page<DadosListagemCarro> listar(@PageableDefault(size = 10, sort = {"marca"}) Pageable paginacao) { //agora podemos controlar por exemplo: http://localhost:8080/medicos?size=1 - mostra só um médico na lista - http://localhost:8080/medicos?size=1&page=2 vai trocando a pagina
-        return repository.findAllByAtivoTrue(paginacao).map(DadosListagemCarro::new);// Fazendo em paginação
-
+    public Page<DadosListagemCarro> listar(@PageableDefault(size = 10, sort = {"marca"}) Pageable paginacao) { 
+        return repository.findAllByAtivoTrue(paginacao).map(DadosListagemCarro::new);
     }
 
 }

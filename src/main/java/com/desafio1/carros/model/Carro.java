@@ -1,6 +1,7 @@
-package com.desafio1.carros.controller;
+package com.desafio1.carros.model;
 
-import jakarta.persistence.Column;
+import com.desafio1.carros.dto.carro.DadosRegistroCarro;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,10 +11,12 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Table(name = "carros")
 @Entity(name = "Carro")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "chassis_id")
@@ -29,7 +32,10 @@ public class Carro {
     private String cor;
     private String ano;
 
+    private Boolean ativo;
+
     public Carro(DadosRegistroCarro dados) {
+        this.ativo = true;
         this.chassis_id = dados.chassis_id();
         this.modelo = dados.modelo();
         this.marca = dados.marca();

@@ -1,4 +1,4 @@
-package com.desafio1.carros.controller;
+package com.desafio1.carros.dto.carro;
 
 public record DadosRegistroCarro(
     

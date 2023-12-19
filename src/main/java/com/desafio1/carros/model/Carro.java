@@ -26,21 +26,21 @@ public class Carro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String chassis_id;
-    private String modelo;
-    private String marca;
-    private String cor;
-    private String ano;
+    private Long chassis_id;
+    private String model;
+    private String brand;
+    private String color;
+    private String fabricationYear;
 
     private Boolean ativo;
 
     public Carro(DadosRegistroCarro dados) {
         this.ativo = true;
         this.chassis_id = dados.chassis_id();
-        this.modelo = dados.modelo();
-        this.marca = dados.marca();
-        this.cor = dados.cor();
-        this.ano = dados.ano();
+        this.model = dados.model();
+        this.brand = dados.brand();
+        this.color = dados.color();
+        this.fabricationYear = dados.fabricationYear();
 
     }
 }

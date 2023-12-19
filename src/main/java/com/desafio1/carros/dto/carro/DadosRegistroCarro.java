@@ -2,14 +2,14 @@ package com.desafio1.carros.dto.carro;
 
 public record DadosRegistroCarro(
     
-    String chassis_id,
+    Long chassis_id,
 
-    String modelo,
+    String model,
 
-    String marca,
+    String brand,
 
-    String cor,
+    String color,
 
-    String ano) {
+    String fabricationYear) {
 
 }

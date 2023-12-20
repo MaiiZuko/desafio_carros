@@ -1,12 +1,9 @@
-package com.desafio1.carros.dto.carro;
+package com.desafio1.carros.model.carro.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosRegistroCarro(
-    
-
-    Long chassis_id,
 
     @NotBlank
     String model,
@@ -18,6 +15,6 @@ public record DadosRegistroCarro(
     String color,
 
     @NotBlank
-    String fabricationYear) {
+    String fabrication_year) {
 
 }

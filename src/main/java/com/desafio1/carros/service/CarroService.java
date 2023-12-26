@@ -1,7 +1,5 @@
 package com.desafio1.carros.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.desafio1.carros.infra.exception.CarroNotFoundException;
 import com.desafio1.carros.model.Carro;
 import com.desafio1.carros.model.carro.dto.DadosListagemCarro;
@@ -13,7 +11,6 @@ public class CarroService {
     private final CarrosRepository carrosRepository;
     private final CarroDTO carroDTO;
 
-    @Autowired
     public CarroService(CarrosRepository carrosRepository, CarroDTO carroDTO) {
         this.carrosRepository = carrosRepository;
         this.carroDTO = carroDTO;

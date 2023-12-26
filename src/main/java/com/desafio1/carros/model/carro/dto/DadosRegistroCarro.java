@@ -1,5 +1,7 @@
 package com.desafio1.carros.model.carro.dto;
 
+import com.desafio1.carros.model.Brand;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -9,7 +11,7 @@ public record DadosRegistroCarro(
     String model,
 
     @NotNull
-    String brand,
+    Brand brand,
 
     @NotBlank
     String color,

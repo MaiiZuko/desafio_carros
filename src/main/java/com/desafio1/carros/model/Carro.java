@@ -3,6 +3,8 @@ package com.desafio1.carros.model;
 import com.desafio1.carros.model.carro.dto.DadosRegistroCarro;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,7 +30,8 @@ public class Carro {
 
     private String model;
     
-    private String brand;
+    @Enumerated(EnumType.STRING)
+    private Brand brand;
 
     private String color;
 
